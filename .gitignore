@@ -1,0 +1,9 @@
+# Files
+yarn.lock
+yarn-error.log
+package-lock.json
+
+# Folders
+
+/public/build
+/node_modules/

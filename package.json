@@ -1,0 +1,23 @@
+{
+  "name": "rhyme-site",
+  "version": "1.0.0",
+  "description": "The site used for Rhyme the best music player",
+  "main": "index.js",
+  "repository": "https://github.com/Rhyme-Player/RhymeSite",
+  "author": "The Rhyme Project",
+  "license": "GPL3",
+  "private": false,
+  "scripts": {
+    "watch-ts": "tsc -w",
+    "watch-scss": "node-sass -w src -o ./public/build",
+    "build": "tsc && node-sass src -o ./public/build",
+    "server": "node ./server.js",
+    "start": "concurrently npm:build npm:server npm:watch-scss npm:watch-ts"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^6.0.1",
+    "typescript": "^4.3.5"
+  }
+}

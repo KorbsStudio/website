@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    "target": "es5",
+    "module": "commonjs",
+
+    "outDir": "./public/build",
+    "rootDir": "./src",
+
+    "removeComments": true,
+
+    "strict": true
+  }
+}
