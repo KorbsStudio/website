@@ -1,10 +1,13 @@
-let osName = "Unknown OS";
-if (navigator.appVersion.indexOf("Win") != -1) {
-  osName = "Windows";
-} else if (navigator.appVersion.indexOf("Mac") != -1) {
-  osName = "Mac";
-} else if (navigator.appVersion.indexOf("Linux") != -1) {
-  osName = "Linux";
-}
+let osName = "your OS";
+// if (navigator.platform.indexOf("Win") != -1) {
+//   osName = "Windows";
+// } else if (navigator.platform.indexOf("Mac") != -1) {
+//   osName = "Mac";
+// } else if (navigator.platform.indexOf("Linux") != -1) {
+//   osName = "Linux";
+// }
 
-document.getElementById("download")?.innerText = `Download for ${osName}`;
+console.log(navigator);
+
+let downloadLink = document.getElementById("download");
+if (downloadLink) downloadLink.innerText = `Download for ${osName}`;
