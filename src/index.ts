@@ -7,7 +7,5 @@ if (navigator.platform.indexOf("Win") != -1) {
   osName = "Linux";
 }
 
-console.log(navigator);
-
 let downloadLink = document.getElementById("download");
 if (downloadLink) downloadLink.innerText = `Download for ${osName}`;
