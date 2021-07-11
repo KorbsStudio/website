@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+header > h1 {
+  font-family: "Source Code Pro";
+  color: white;
+  font-weight: normal;
+  font-size: 1.9em;
+  position: relative;
+  width: 22ch;
+  &::before,
+  &::after {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before {
+    background-color: #242424;
+    animation: move 1s forwards;
+  }
+
+  &::after {
+    width: 3px;
+    background-color: #d2d2d2;
+    animation: blink 1s infinite ease-in;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 0ch;
+  }
+  100% {
+    left: 22ch;
+  }
+}
+
+header > a {
+  background-color: #ef005f;
+  width: auto;
+  flex-grow: 0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 180px;
+  transition: 0.7s;
+  &:hover {
+    background-color: darken(#ef005f, 10);
+  }
+}
