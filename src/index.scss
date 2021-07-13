@@ -1,9 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 
+@keyframes blink {
+  to {
+    background-color: transparent;
+  }
+}
+
+@keyframes move {
+  to {
+    left: 100%;
+  }
+}
+
 header {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 50px;
 }
 
 header > h1 {
@@ -37,22 +49,10 @@ header > h1 {
   }
 }
 
-@keyframes blink {
-  to {
-    background-color: transparent;
-  }
-}
-
-@keyframes move {
-  to {
-    left: 100%;
-  }
-}
-
 header > a {
   background-color: #ef005f;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 40px;
   border-radius: 5px;
   flex-grow: 0;
   display: inline;
@@ -60,5 +60,59 @@ header > a {
   transition: 0.7s;
   &:hover {
     background-color: darken(#ef005f, 10);
+  }
+}
+
+.screenshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vw * 575px / 1103px;
+  position: relative;
+  padding-top: 50px;
+  height: max-content;
+
+  &::before {
+    content: "";
+    background-color: #242424;
+    // Calculate 1/2 the height of the image
+    height: (80vw * 575px / 1103px) / 2;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  img {
+    width: 80vw;
+    box-shadow: rgba(0, 0, 0, 0.4) 4px 4px 10px;
+    z-index: 5;
+  }
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 50px;
+}
+
+.open-source {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  h2 {
+    font-weight: normal;
+  }
+  p {
+    color: #5c5c5c;
+  }
+}
+
+.features {
+  h1 {
+    font-weight: normal;
   }
 }
