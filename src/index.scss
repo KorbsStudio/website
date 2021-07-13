@@ -12,6 +12,16 @@
   }
 }
 
+.development {
+  background: linear-gradient(90deg, #00a3ff 0%, #ef005f 100%);
+  padding: 1em;
+  color: white;
+  text-align: center;
+  a {
+    color: dodgerblue;
+  }
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -108,6 +118,7 @@ main {
   }
   p {
     color: #5c5c5c;
+    text-align: center;
   }
 }
 

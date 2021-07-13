@@ -8,4 +8,23 @@ if (navigator.platform.indexOf("Win") != -1) {
 }
 
 let downloadLink = document.getElementById("download");
-if (downloadLink) downloadLink.innerText = `Download for ${osName}`;
+if (downloadLink) {
+  downloadLink.innerText = `Download for ${osName}`;
+  downloadLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    switch (downloadLink?.textContent) {
+      case "Download for Linux":
+        window.location.href = "./downloads/linux";
+        break;
+      case "Download for Windows":
+        window.location.href = "./downloads/win";
+        break;
+      case "Download for Mac":
+        window.location.href = "./downloads/mac";
+        break;
+      default:
+        window.location.href = "./downloads";
+        break;
+    }
+  });
+}
