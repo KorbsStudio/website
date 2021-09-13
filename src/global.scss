@@ -19,14 +19,23 @@ header {
     }
     ul {
       display: flex;
-      gap: 15px;
       list-style: none;
+      position: relative;
+
+      li {
+        &:nth-child(1) {
+          margin: 0;
+        }
+        margin-left: 15px;
+      }
 
       a {
         color: #d2d2d2;
         transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        position: relative;
         &:hover {
-          letter-spacing: 1px;
           color: #ef005f;
         }
       }
