@@ -1,23 +1,23 @@
 {
-  "name": "rhyme-site",
+  "name": "svelte-app",
   "version": "1.0.0",
-  "description": "The site used for Rhyme the best music player",
-  "main": "index.js",
-  "repository": "https://github.com/Rhyme-Player/RhymeSite",
-  "author": "The Rhyme Project",
-  "license": "GPL3",
-  "private": false,
+  "private": true,
   "scripts": {
-    "watch-ts": "tsc -w",
-    "watch-scss": "node-sass -w src -o ./public/build",
-    "build": "tsc && node-sass src -o ./public/build",
-    "server": "node ./server.js",
-    "start": "concurrently npm:build npm:server npm:watch-scss npm:watch-ts"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public --no-clear --host"
   },
   "devDependencies": {
-    "concurrently": "^6.2.0",
-    "live-server": "^1.2.1",
-    "node-sass": "^6.0.1",
-    "typescript": "^4.3.5"
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "sirv-cli": "^1.0.0"
   }
 }

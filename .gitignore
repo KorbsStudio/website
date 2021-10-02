@@ -1,9 +1,5 @@
-# Files
-yarn.lock
-yarn-error.log
-package-lock.json
-
-# Folders
-
-/public/build
 /node_modules/
+/public/build/
+
+.DS_Store
+yarn.lock
