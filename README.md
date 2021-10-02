@@ -1,7 +1,7 @@
 ## What is this
 
 This is the official website for [Rhyme](https://github/rhyme-player/rhyme) made with svelte
-Site can be found [here](https://rhyme-player.io)
+Site can be found [here](http://rhyme-player.io)
 
 ## How to use
 
