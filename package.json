@@ -1,0 +1,21 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Rhyme-Player/Website.git",
+  "author": "abdallah-moh <abdallah.mam29@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node-sass -w src/scss/*.scss -o src/scss/",
+    "serve": "sirv src --no-clear --host",
+    "scss": "node-sass -w src/scss/*.scss -o src/scss/",
+    "dev": "npm run build && concurrently -k npm:serve npm:scss"
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0"
+  },
+  "dependencies": {
+    "node-sass": "^6.0.1",
+    "sirv-cli": "^1.0.14"
+  }
+}
